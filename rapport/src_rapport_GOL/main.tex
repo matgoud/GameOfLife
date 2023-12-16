@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[french]{algorithm2e}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tikz-uml}
+\usepackage{float}
+\usepackage[colorlinks=true]{hyperref} 
+
+\title{Rapport Game Of Life}
+\author{Brice Andrieux, Clément Bartolone, Mathieu Goudal, Loïc Laloux}
+\date{March 2023}
+
+\begin{document}
+
+\maketitle
+    \begin{figure}[htp]
+        \center
+        \includegraphics[scale=16]{images/glider.png}
+    \end{figure}
+    
+\newpage
+    \tableofcontents
+\newpage
+
+\section{Introduction}
+\par Le projet "\textbf{Game of Life}" est une simulation informatique développée par le mathématicien britannique \textbf{John Horton Conway} dans les années 1970. Cette simulation permet de créer des modèles de l'évolution de populations en utilisant des règles simples et automatisées. Notre but était de concevoir une application permettant de lancer une simulation de "\textbf{Game of life}".
+\par Cependant, malgré sa simplicité apparente, la simulation "\textbf{Game of Life}" présente des problématiques complexes, notamment dans la mise en œuvre d'algorithmes performants pour gérer les évolutions massives de cellules sur un grand nombre de générations. Parmi les points durs de la problématique, on peut citer le développement de l'algorithme "\textbf{Hashlife}", qui permet d'accélérer considérablement les calculs en optimisant la gestion des cellules inactives.
+\par Pour ce projet, Le travail a été réparti entre nous quatre. Pour cela chacun a fait un package. Le package automate/gridlife a été réalisé par \textbf{Brice Andrieux}, le package automate/hashlife a été réalisé par \textbf{Clément Bartolone}, le package graphique et la moitié du package lecteur fichier a été réalisé par \textbf{Mathieu Goudal} et le reste du package lecteur fichier et le package test a été réalisé par \textbf{Loïc Laloux}.  
+\par Dans ce rapport, nous allons aborder trois aspects clés de notre projet "\textbf{Game of Life}". Tout d'abord, nous allons explorer l'utilisation d'algorithmes neuraux. Ensuite, nous allons nous concentrer sur l'algorithme "\textbf{Hashlife}" et son implémentation dans la simulation "\textbf{Game of Life}". Enfin, nous allons présenter notre interface graphique et vous expliquer comment l'utiliser.
+
+\input{AlgoNeuraux}
+\input{VoisinageMargolus}
+\input{Hashlife}
+\input{interfaceGraphique}
+\input{architecture}
+
+\end{document}
